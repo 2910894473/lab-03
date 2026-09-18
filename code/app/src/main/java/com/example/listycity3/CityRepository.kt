@@ -14,4 +14,10 @@ class CityRepository {
     fun addCity(city: City) {
         _cities.add(city)
     }
+
+    fun updateCity(index: Int, updatedCity: City) {
+        if (index in _cities.indices) {
+            _cities[index] = updatedCity
+        }
+    }
 }
